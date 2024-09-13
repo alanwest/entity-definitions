@@ -10,9 +10,8 @@ synthesis:
     # OpenTelemetry entities are synthesized as EXT-SERVICE entities.
     # This rule is a temporary way for us to find out what would happen
     # if they were synthesized as APM-APPLICATION instead.
-  - identifier: service.name
+  - identifier: entity.apm.otel.id
     name: service.name
-    encodeIdentifierInGUID: true
     conditions:
     - attribute: newrelic.entity.type
       value: apm
